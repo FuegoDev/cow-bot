@@ -7,7 +7,7 @@ import json
 
 client = discord.Client()
 
-
+## not working ##
 def get_quote():
   response = requests.get("https://zenquotes.io/api/random")
   json_data = json.load(response.text)
@@ -20,7 +20,7 @@ async def on_ready():
   print('We Have Logged In As {0.user}'.format(client))
 
   
-  
+  ## commands ##
 @client.event
 async def on_message(message):
   if message.author == client.user:
@@ -50,6 +50,6 @@ async def on_message(message):
 
 
 
-
+## DO NOT TOUCH IS HOSTING SERVER ##
 keep_alive.keep_alive()
 client.run(os.getenv("TOKEN"))
